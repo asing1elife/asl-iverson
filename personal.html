@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人简介</title>
+<link rel="stylesheet" href="css/personal.css" type="text/css" />
+</head>
+<body>
+	<div class="container">
+		<iframe name="header" frameborder="0" scrolling="no" src="subframe/header.html"></iframe>
+		<div id="top" onclick="scroll_return_top()" style="cursor:pointer"></div>
+		<script type="text/javascript" src="js/myJavaScript.js"></script>
+		<div class="main">
+			<div class="pic">
+				<div class="left_pic" id="left_pic" onclick="get_cost(event); float_img()"><img src="images/personal_left_pic.jpg" alt="" title="" /></div>
+				<div id="show"></div>
+				<div id="close" onclick="close_show_img()"></div>
+				<script type="text/javascript">
+					var moveX = 0;		// X 轴方向移动的距离
+					var moveY = 0;		// Y 轴方向移动的距离
+					var directionX = 0;		// 设置图片在 X 轴的移动方向
+					var directionY = 0;		// 设置图片在 Y 轴的移动方向
+					var oldImg = document.getElementById("left_pic");		// 原图片所在层
+					var newImg = document.getElementById("show");		// 新图片所在层
+					var close_btn = document.getElementById("close");		// 关闭按钮
+					newImg.innerHTML = oldImg.innerHTML;		// 复制内容
+					var old_img = oldImg.getElementsByTagName("img");
+					var temp_img = newImg.getElementsByTagName("img");
+					var time;
+					var temp = 0;
+					/* 赋值 */
+					function get_cost(event) {
+						if (document.defaultView.getComputedStyle(newImg, null).display != "block") {
+							moveX = event.clientX;
+							moveY = event.clientY;	
+						}
+					}
+					
+					/* 图片漂移到浏览器中间 */
+					function float_img() {
+						var new_width = document.defaultView.getComputedStyle(newImg, null).width;
+						var new_height = document.defaultView.getComputedStyle(newImg, null).height;
+						var img_width = document.defaultView.getComputedStyle(temp_img.item(0), null).width;
+						var img_height = document.defaultView.getComputedStyle(temp_img.item(0), null).height;
+						var width = document.documentElement.clientWidth;		// 浏览器宽度
+						var height = document.documentElement.clientHeight;		// 浏览器高度
+						var temp_left = (width - parseInt(img_width)) / 2;
+						var temp_top = (height - parseInt(img_height)) / 2;
+						newImg.style.display = "block";
+						close_btn.style.display = "block";
+						if (!isNaN(temp_left / temp_top)) {
+							temp = temp_left / temp_top;
+						}
+						newImg.style.left = parseInt(moveX + document.documentElement.scrollLeft) + "px";		// 漂浮图片距浏览器左侧位置
+						newImg.style.top = parseInt(moveY + document.documentElement.scrollTop) + "px";		// 漂浮图片距浏览器顶端位置
+						close_btn.style.left = parseInt(moveX + document.documentElement.scrollLeft) + "px";		// 漂浮图片距浏览器左侧位置
+						close_btn.style.top = parseInt(moveY + document.documentElement.scrollTop) + "px";		// 漂浮图片距浏览器顶端位置
+						var new_left = document.defaultView.getComputedStyle(newImg, null).left;
+						var new_top = document.defaultView.getComputedStyle(newImg, null).top;
+						if (parseInt(new_left) >= temp_left && parseInt(new_top) >= temp_top) {
+							clearTimeout(time);
+							return;
+						}
+						temp_img.item(0).style.width = parseInt(img_width) + 1 + "px";
+						temp_img.item(0).style.height = parseInt(img_height) + 1 + "px";
+						newImg.style.width = parseInt(new_width) + 1 + "px";
+						newImg.style.height =  parseInt(new_height) + 1 + "px";
+						// 漂浮图片在 X 轴方向上向右移动
+						if (directionX == 0) {
+							moveX = moveX + temp; 
+						}
+						// 漂浮图片在 Y 轴方向上向下移动
+						if (directionY == 0) {    
+							moveY = moveY + 1;		
+						}
+						time = setTimeout("float_img()", 1);
+					}
+					
+					/* 关闭图片预览 */
+					function close_show_img() {
+						newImg.style.display = "none";
+						close_btn.style.display = "none";
+						newImg.style.width = "242px";
+						newImg.style.height = "346px";
+						newImg.innerHTML = oldImg.innerHTML;		// 复制内容
+					}
+				</script>
+				<div class="right_text">
+					<h4>总体介绍</h4>
+					<hr />
+					阿伦 · 艾弗森，绰号“答案”（<span>The Answer</span>）<br />
+					美国<span> NBA </span>著名篮球运动员<br />
+					曾多次入选 NBA <span>全明星阵容</span>，曾担任美国<span>奥运梦之队队长</span><br />
+					原地<span>净弹跳</span>高度达到 40.5 英寸<br />
+					助跑净弹跳高度更是达到惊人的 45（<span>114cm</span>） 英寸<br />
+					1996 年 6 月 26 日被费城 76 人选中，成为 NBA 历史上<span>最矮的状元秀</span><br />
+				</div>
+			</div>
+			<div class="text">
+				<h3>详细介绍</h3>
+				<hr />
+				<table>
+					<tr>
+						<td class="left">中文名：</td>
+						<td>阿伦·埃泽尔·艾弗森</td>
+					</tr>
+					<tr>
+						<td class="left">英文名：</td>
+						<td>Allen Ezail Iverson</td>
+					</tr>
+					<tr>
+						<td class="left">绰号：</td>
+						<td>答案（The Answer）&nbsp; 、A.I.</td>
+					</tr>
+					<tr>
+						<td class="left">国籍：</td>
+						<td>美国</td>
+					</tr>
+					<tr>
+						<td class="left">出生地：</td>
+						<td>弗吉尼亚州汉普顿</td>
+					</tr>
+					<tr>
+						<td class="left">出生日期：</td>
+						<td>1975 年 6 月 7 日</td>
+					</tr>
+					<tr>
+						<td class="left">毕业院校：</td>
+						<td>汉普顿高中&nbsp;、乔治敦大学</td>
+					</tr>
+					<tr>
+						<td class="left">身高：</td>
+						<td>1.83 米（6 英尺）</td>
+					</tr>
+					<tr>
+						<td class="left">体重：</td>
+						<td>74.8 公斤（165 磅）</td>
+					</tr>
+					<tr>
+						<td class="left">运动项目：</td>
+						<td>篮球</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<iframe name="footer" frameborder="0" scrolling="no" src="subframe/footer.html"></iframe>
+	</div>
+</body>
+</html>

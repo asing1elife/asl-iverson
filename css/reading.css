@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:4190px;
+	_height:4090px;
+	margin:0px auto;
+	font-size:12px;
+	font-family:微软雅黑;
+}
+ul, li {
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a:hover {
+	color:#5A0D43;
+}
+a:active {
+	background-color:#FFF;
+}
+	.container iframe {
+		width:980px;
+		height:110px;
+	}
+	.container .main {
+		width:980px;
+		height:4170px;
+		_height:4070px;
+	}
+		.container .main .top {
+			width:978px;
+			height:393px;
+			margin-bottom:10px;
+			border:1px solid #CCC;
+		}
+		.container .main .nav {
+			width:980px;
+			height:74px;
+		}
+			.container .main .nav div {
+				width:980px;
+				height:10px;
+				background:#E4E4E4;
+				padding:10px 0px;
+				font-weight:bold;
+			}
+			.container .main .nav .nav_top {
+				margin-bottom:10px;
+			}
+			.container .main .nav div li {
+				list-style:none;
+				float:left;
+				width:75px;
+				line-height:10px;
+				text-align:center;
+			}
+		.container .main .text {
+			width:958px;
+			height:3637px;
+			_height:3537px;
+			margin-top:10px;
+			padding:10px;
+			border:1px solid #CCC;
+			line-height:23px;
+		}
+			.container .main .text #head {
+				font-size:50px;
+				font-weight:bold;
+				color:#AF1258;
+				line-height:50px;
+			}
+			.container .main .text #tail {
+				font-size:30px;
+				font-weight:bold;
+				color:#5A0D43;;
+				line-height:30px;
+			}
+			.container .main .text .text_pic1 {
+				width:400px;
+				height:248px;
+				padding:5px 5px 25px 5px;
+				border:1px solid #CCC;
+				margin-left:10px;
+				float:right;
+			}
+			.container .main .text .text_pic2 {
+				widht:320px;
+				height:490px;
+				padding:5px 5px 25px 5px;
+				border:1px solid #CCC;
+				margin-right:10px;
+				float:left;
+			}
+			.container .main .text .text_pic3 {
+				width:369px;
+				height:550px;
+				padding:5px 5px 25px 5px;
+				border:1px solid #CCC;
+				margin-left:10px;
+				float:right;
+			}
+			.container .main .text .text_pic4 {
+				width:420px;
+				height:280px;
+				padding:5px 5px 25px 5px;
+				border:1px solid #CCC;
+				margin-right:10px;
+				float:left;
+			}
+			.container .main .text .text_pic5 {
+				width:363px;
+				height:500px;
+				padding:5px 5px 25px 5px;
+				border:1px solid #CCC;
+				margin-left:10px;
+				float:right;
+			}
+			
+#top {
+	width:16px;
+	height:16px;
+	position:absolute;
+	z-index:2;
+	background-image:url(../images/arrow-up.png);
+	margin-left:985px;
+	margin-top:500px;
+	display:none;
+}

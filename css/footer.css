@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:76px;
+	margin:0px auto;
+	padding-top:44px;
+	font-family:微软雅黑;
+	font-size:12px;
+	margin-left:-7px;
+	_margin-left:-15px;
+	margin-top:-20px;
+}
+ul, li {
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a:hover {
+	color:#5A0D43;
+}
+a:active {
+	background-color:#FFF;
+}
+	.container .top {
+		width:730px;
+		height:36px;
+		border-top:1px solid #CCC;
+		border-bottom:1px solid #CCC;
+		padding-left:250px;
+	}
+		.container .top ul li {
+			list-style:none;
+			float:left;
+			width:100px;
+			line-height:36px;
+			text-align:center;
+			
+		}
+	.container .bottom {
+		width:980px;
+		height:40px;
+		text-align:center;
+		line-height:40px;
+	}
+	
+#time {
+	width:980px;
+	height:20px;
+	position:absolute;
+	z-index:2;
+	margin-top:20px;
+	margin-left:-8px;
+}
+
+#time_dome {
+	width:980px;
+	height:20px;
+	overflow:hidden;
+}
+
+#time_dome_1, #time_dome_2 {
+	width:980px;
+	height:20px;
+	font-size:13px;
+	line-height:20px;
+	color:#5A0D43;
+}
+
+#time_dome_1 {
+	float:left;
+}
+
+#time_dome_2 {
+	margin-left:980px;
+}

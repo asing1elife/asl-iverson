@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:840px;
+	margin:0px auto;
+}
+	.container iframe {
+		width:980px;
+		height:110px;
+	}
+	.container .main {
+		width:980px;
+		height:620px;
+	}

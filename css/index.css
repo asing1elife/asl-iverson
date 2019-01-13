@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:840px;
+	margin:0px auto;
+}
+	.container iframe {
+		width:980px;
+		height:110px;
+	}
+	.container .main {
+		width:980px;
+		height:620px;
+	}
+		.container .main .big_pic {
+			width:978px;
+			height:428px;
+		}
+			.container .main .big_pic #pic {
+				width:978px;
+				height:428px;
+			}
+			.container .main .big_pic #btn {
+				width:200px;
+				height:321px;
+				position:absolute;
+				top:180px;
+				z-index:2;
+				text-align:center;
+				padding-left:2px;
+			}
+				.container .main .big_pic #btn input {
+					margin-bottom:20px;
+				}
+		.container .main .left, .container .main .center, .container .main .right {
+			height:178px;
+			margin-top:10px;
+			float:left;
+		}
+		.container .main .left {
+			width:324px;
+		}
+		.container .main .center {
+			width:310px;
+			margin-left:10px;
+			margin-right:10px;
+		}
+		.container .main .right {
+			width:326px;
+		}
+		
+#myTable tr td img {
+	border:1px solid #CCC;
+}
+		
+#left_dome {
+	width:324px;
+	height:178px;
+	border-top:1px;
+	border-bottom:1px;
+	border-left:0px;
+	border-right:0px;
+	border-style:solid;
+	border-color:#CCC;
+	overflow:hidden;
+}
+
+#left_dome_1 img, #left_dome_2 img {
+	margin-bottom:10px;
+	border:1px solid #CCC;
+}
+
+#center_dome {
+	width:310px;
+	height:178px;
+	border-top:1px;
+	border-bottom:1px;
+	border-left:0px;
+	border-right:0px;
+	border-style:solid;
+	border-color:#CCC;
+	overflow:hidden;
+}
+
+#center_dome_1 img, #center_dome_2 img {
+	margin-bottom:10px;
+	border:1px solid #CCC;
+}
+
+#right_dome {
+	width:326px;
+	height:178px;
+	border-top:1px;
+	border-bottom:1px;
+	border-left:0px;
+	border-right:0px;
+	border-style:solid;
+	border-color:#CCC;
+	overflow:hidden;
+}
+
+#right_dome_1 img, #right_dome_2 img {
+	margin-bottom:10px;
+	border:1px solid #CCC;
+}
+
+#btn_dome {
+	width:220px;
+	height:330px;
+	overflow:hidden;
+}
+
+#btn_dome_1, #btn_dome_2 {
+	width:220px;
+	height:330px;
+}
+
+#btn_dome_1 {
+	float:left;
+}
+
+#btn_dome_2 {
+	margin-left:220px;
+}

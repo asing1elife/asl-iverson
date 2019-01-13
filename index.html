@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人网页首页</title>
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+<script type="text/javascript" src="js/SlideTrans.js"></script>
+</head>
+<body>
+	<div class="container">
+		<iframe name="header" frameborder="0" scrolling="no" src="subframe/header.html"></iframe>
+		<div class="main">
+			<div class="big_pic">
+				<div id="pic">
+					<table id="myTable" border="0" bordercolor="#CCC" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/play_pic_1.jpg" alt="" title="" /></td>
+							<td><img src="images/play_pic_2.jpg" alt="" title="" /></td>
+							<td><img src="images/play_pic_3.jpg" alt="" title="" /></td>
+						</tr>
+					</table>
+				</div>
+				<div id="btn">
+					<div id="btn_dome">
+						<div id="btn_dome_1">
+							<input name="btn" type="image" src="images/btn1.jpg" />
+							<input name="btn" type="image" src="images/btn2.jpg" />
+							<input name="btn" type="image" src="images/btn3.jpg" />
+						</div>
+						<script type="text/javascript">
+							var st = new SlideTrans("pic", "myTable", 3, { Vertical: false });		// 图片滚动方法
+							var btn = document.getElementsByName("btn");		// 按钮数组
+							function btn_scroll() {
+								// 绑定相应按钮事件
+								btn.item(0).onclick = function() { st.Run(0); }
+								btn.item(1).onclick = function() { st.Run(1); }
+								btn.item(2).onclick = function() { st.Run(2); }
+							}
+							// 开始滚动
+							st.Run();
+							window.onload = btn_scroll;
+						</script>
+						<div id="btn_dome_2">
+						</div>
+					</div>
+					<script type="text/javascript">
+						var btn_dome = document.getElementById("btn_dome");		// 第一层
+						var btn_dome_1 = document.getElementById("btn_dome_1");		// 第二层
+						var btn_dome_2 = document.getElementById("btn_dome_2");		// 第三层
+						var pic_dome = document.getElementById("pic");		// 大图层
+						var show_btn;		// 显示图层定时器
+						var hide_btn;		// 隐藏图层定时器
+						btn_dome.scrollLeft = 220;		// 设置初始大小为最大
+						/* 循环滚动显示按钮层 */
+						function scroll_show_btn() {
+							// 判断滚动态是否到最左
+							if (btn_dome.scrollLeft == 0) {
+								clearInterval(show_btn);		// 停止定时器
+								return;
+							} else {
+								btn_dome.scrollLeft = btn_dome.scrollLeft - 5;		// 滚动条滚动
+							}
+						}
+						/* 循环滚动隐藏按钮层 */
+						function scroll_hide_btn() {
+							// 判断滚动态是否到最右
+							if (btn_dome.scrollLeft == 220) {
+								clearInterval(hide_btn);		// 停止定时器
+								return;
+							} else {
+								btn_dome.scrollLeft = btn_dome.scrollLeft + 5;		// 滚动条滚动
+							}
+						}
+						/* 鼠标在大图层按下显示按钮层 */
+						pic_dome.onmousedown = function() {
+							// 判断滚动条 
+							if (btn_dome.scrollLeft == 0) {
+								hide_btn = setInterval("scroll_hide_btn()", 1);		// 设置定时器
+							} else {
+								show_btn = setInterval("scroll_show_btn()", 1);		// 设置定时器
+							}
+						}
+					</script>
+				</div>
+			</div>
+			<div class="left">
+				<div id="left_dome">
+					<div id="left_dome_1">
+						<img src="images/left_pic_1.jpg" alt="" title="" />
+						<img src="images/left_pic_2.jpg" alt="" title="" />
+						<img src="images/left_pic_3.jpg" alt="" title="" />
+						<img src="images/left_pic_1.jpg" alt="" title="" />
+						<img src="images/left_pic_2.jpg" alt="" title="" />
+						<img src="images/left_pic_3.jpg" alt="" title="" />
+					</div>
+					<div id="left_dome_2"></div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				/* 循环显示图片 */
+				var left_dome = document.getElementById("left_dome");		// 第一层
+				var left_dome_1 = document.getElementById("left_dome_1");		// 第二层
+				var left_dome_2 = document.getElementById("left_dome_2");		// 第三层
+				left_dome_2.innerHTML = left_dome_1.innerHTML;		// 复制第二层内容到第三层
+				function showLeftImg() {
+					// 判断第一层与第三层是否交界
+					if (left_dome_2.offsetTop - left_dome.scrollTop <= 559) {
+						left_dome.scrollTop -= left_dome_1.offsetHeight;		// 回到最顶端
+					} else {
+						left_dome.scrollTop++;		// 第一层滚动
+					}
+				}
+				/* 设置定时器 */
+				var left_time = setInterval("showLeftImg()", 50);
+				/* 鼠标移动到图片上通过清除计时器来停止滚动 */
+				left_dome.onmouseover = function() {
+					clearInterval(left_time);
+				}
+				/* 鼠标离开图片后重启定时器 */
+				left_dome.onmouseout = function() {
+					left_time = setInterval("showLeftImg()", 50);
+				}
+			</script>
+			<div class="center">
+				<div id="center_dome">
+					<div id="center_dome_1">
+						<img src="images/center_pic_1.jpg" alt="" title="" />
+						<img src="images/center_pic_2.jpg" alt="" title="" />
+						<img src="images/center_pic_3.jpg" alt="" title="" />
+						<img src="images/center_pic_1.jpg" alt="" title="" />
+						<img src="images/center_pic_2.jpg" alt="" title="" />
+						<img src="images/center_pic_3.jpg" alt="" title="" />
+					</div>
+					<div id="center_dome_2"></div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				/* 循环显示图片 */
+				var center_dome = document.getElementById("center_dome");		// 第一层
+				var center_dome_1 = document.getElementById("center_dome_1");		// 第二层
+				var center_dome_2 = document.getElementById("center_dome_2");		// 第三层
+				center_dome_2.innerHTML = center_dome_1.innerHTML;		// 复制第二层内容到第三层
+				function showCenterImg() {
+					// 判断是否已滚动到最底层
+					if (center_dome.scrollTop == 0) {
+						center_dome.scrollTop = 569;
+					} else {
+						center_dome.scrollTop--;		// 第一层滚动
+					}
+				}
+				/* 设置定时器 */
+				var center_time = setInterval("showCenterImg()", 50);
+				/* 鼠标移动到图片上通过清除计时器来停止滚动 */
+				center_dome.onmouseover = function() {
+					clearInterval(center_time);
+				}
+				/* 鼠标离开图片后重启定时器 */
+				center_dome.onmouseout = function() {
+					center_time = setInterval("showCenterImg()", 50);
+				}
+			</script>
+			<div class="right">
+				<div id="right_dome">
+					<div id="right_dome_1">
+						<img src="images/right_pic_1.jpg" alt="" title="" />
+						<img src="images/right_pic_2.jpg" alt="" title="" />
+						<img src="images/right_pic_3.jpg" alt="" title="" />
+					</div>
+					<div id="right_dome_2"></div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				/* 循环显示图片 */
+				var right_dome = document.getElementById("right_dome");		// 第一层
+				var right_dome_1 = document.getElementById("right_dome_1");		// 第二层
+				var right_dome_2 = document.getElementById("right_dome_2");		// 第三层
+				right_dome_2.innerHTML = right_dome_1.innerHTML;		// 复制第二层内容到第三层
+				function showRightImg() {
+					// 判断第一层与第三层是否交界
+					if (right_dome_2.offsetTop - right_dome.scrollTop <= 559) {
+						right_dome.scrollTop -= right_dome_1.offsetHeight;		// 回到最顶端
+					} else {
+						right_dome.scrollTop++;		// 第一层滚动
+					}
+				}
+				/* 设置定时器 */
+				var right_time = setInterval("showRightImg()", 50);
+				/* 鼠标移动到图片上通过清除计时器来停止滚动 */
+				right_dome.onmouseover = function() {
+					clearInterval(right_time);
+				}
+				/* 鼠标离开图片后重启定时器 */
+				right_dome.onmouseout = function() {
+					right_time = setInterval("showRightImg()", 50);
+				}
+			</script>
+		</div>
+		<iframe name="footer" frameborder="0" scrolling="no" src="subframe/footer.html"></iframe>
+	</div>
+</body>
+</html>

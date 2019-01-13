@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:110px;
+	margin:0px auto;
+	font-family:微软雅黑;
+	margin-left:-8px;
+	margin-left:-10px\0;
+	_margin-left:-15px;
+	margin-top:-10px;
+}
+ul, li {
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a:hover {
+	color:#5A0D43;
+}
+a:active {
+	background-color:#FFF;
+}
+	.container .logo, .container .top, .container .bottom, .container .top .language {
+		float:left;
+	}
+	.container .logo {
+		width:200px;
+		height:110px;
+		background:url(../images/logo.gif) no-repeat;
+		margin-left:10px;
+		display:inline;
+	}
+	.container .top {
+		width:770px;
+		height:50px;
+	}
+		.container .top .language {
+			width:200px;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			font-size:12px;
+			margin-left:150px;
+			display:inline;
+		}
+		.container .top .search {
+			width:300px;
+			height:38px;
+			padding-top:12px;
+			text-align:right;
+			float:right;
+		}
+			.container .top .search input {
+				width:150px;
+				height:17px;
+				border:1px solid #CCC;
+			}
+		.container .top .search .icon {
+			width:17px;
+			height:17px;
+			float:right;
+			_float:right;
+			margin-left:5px;
+			margin-top:2px;
+			background:#339;
+		}
+		
+#nav { 
+	position:absolute;
+	width:770px; 
+	height:50px;
+	margin-top:50px;
+	margin-left:200px; 
+	border-bottom:2px #ddd solid;
+}
+
+#nav .nav-menu { 
+	height:50px;
+}
+
+#nav .nav-menu a { 
+	display:block; 
+	float:left; 
+	height:50px; 
+	padding-left:35px;
+	margin-right:10px;
+	line-height:50px; 
+	color:#666; 
+	font-size:16px; 
+	text-decoration:none;
+}
+
+#nav .nav-menu a:hover {
+	color:#5A0D43;
+	font-weight:bold;
+}
+
+#nav .nav-current { 
+	position:absolute; 
+	bottom:-2px; 
+	height:2px; 
+	overflow:hidden; 
+	background:#5A0D43;
+}

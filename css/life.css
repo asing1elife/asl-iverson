@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:1660px;
+	margin:0px auto;
+	font-family:微软雅黑;
+}
+ul, li, h3 {
+	margin:0px;
+	padding:0px;	
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a:hover {
+	color:#5A0D43;
+}
+a:active {
+	background-color:#FFF;
+}
+	.container iframe {
+		width:980px;
+		height:110px;
+	}
+	.container .main {
+		width:980px;
+		height:1440px;
+	}
+		.container .main .top {
+			width:958px;
+			height:320px;
+			border:1px solid #CCC;
+			padding:10px 4px 10px 16px;
+			margin-bottom:10px;
+		}
+			.container .main .top .pic {
+				width:181px;
+				height:320px;
+				float:left;
+				margin-right:10px;
+			}
+			.container .main .top .pic1 {
+				margin-right:0px;
+			}
+		.container .main .insert {
+			width:958px;
+			height:25px;
+			position:absolute;
+			top:424px;
+			_top:431px;
+			z-index:2;
+			padding:0px 4px 0px 17px;
+		}
+			.container .main .insert .title {
+				width:181px;
+				height:25px;
+				float:left;
+				opacity:0.5;
+				filter:alpha(opacity=50);
+				text-align:center;
+				line-height:25px;
+				background:#000;
+				color:#FFF;
+				margin-right:10px;
+			}
+			.container .main .insert .title1 {
+				margin-right:0px;
+			}
+		.container .main .left {
+			width:198px;
+			height:300px;
+			float:left;
+			border:1px solid #CCC;
+			font-size:13px;
+		}
+			.container .main .left div {
+				width:183px;
+				padding-left:15px;
+				padding-top:10px;
+			}
+			.container .main .left .head {
+				height:40px;
+				background:#F9F9F9;
+				font-size:16px;
+				font-weight:bold;
+			}
+			.container .main .left .body {
+				height:240px;
+				background:#F7F7F7;
+			}
+				.container .main .left .body #title {
+					height:30px;
+				}
+				.container .main .left .body li {
+					list-style:none;
+					height:23px;
+					line-height:23px;
+				}
+				.container .main .left .body li span {
+					float:right;
+					margin-right:15px;
+					
+				}
+				.container .main .left .body li #span1 {
+					_float:none;
+					_margin-left:70px;
+				}
+				.container .main .left .body li #span2 {
+					_float:none;
+					_margin-left:81px;
+				}
+				.container .main .left .body li #span3 {
+					_float:none;
+					_margin-left:67px;
+				}
+				.container .main .left .body li #span4 {
+					_float:none;
+					_margin-left:67px;
+				}
+				.container .main .left .body li #span5 {
+					_float:none;
+					_margin-left:27px;
+				}
+		.container .main .right {
+			width:748px;
+			height:1088px;
+			float:left;
+			margin-left:10px;
+			padding:10px;
+			border:1px solid #CCC;
+			font-size:13px;
+			display:block;
+			overflow:hidden;
+		}
+			.container .main .right h3 {
+				font-size:20px;
+			}
+			.container .main .right .chapter {
+				width:748px;
+				height:1108px;
+				padding-top:10px;
+				line-height:23px;
+			}
+			.container .main .right .chapter5 {
+				_line-height:20px;
+			}
+				.container .main .right .chapter .insert_pic {
+					width:230px;
+					height:314px;
+					padding:5px 5px 25px 5px;
+					border:1px solid #CCC;
+				}
+				.container .main .right .chapter #insert_pic1 {
+					float:right;
+					margin-left:10px;
+				}
+				.container .main .right .chapter #insert_pic2 {
+					float:left;
+					margin-right:10px;
+				}
+				.container .main .right .chapter #insert_pic3 {
+					float:left;
+					margin-right:10px;
+				}
+				.container .main .right .chapter #insert_pic4 {
+					float:right;
+					margin-left:10px;
+				}
+				.container .main .right .chapter #insert_pic5 {
+					float:right;
+					margin-left:10px;
+				}
+				.container .main .right .chapter #insert_pic6 {
+					float:left;
+					margin-right:10px;
+				}
+				.container .main .right .chapter #insert_pic7 {
+					float:left;
+					margin-right:10px;
+				}
+				.container .main .right .chapter #insert_pic8 {
+					float:right;
+					margin-left:10px;
+				}
+				.container .main .right .chapter #insert_pic9 {
+					float:right;
+					margin-left:10px;
+				}
+				.container .main .right .chapter #insert_pic10 {
+					float:left;
+					margin-right:10px;
+				}
+				.container .main .right .chapter #insert_pic11 {
+					float:left;
+					margin-right:10px;
+				}
+				.container .main .right .chapter #insert_pic12 {
+					float:right;
+					margin-left:10px;
+				}
+
+#top {
+	width:16px;
+	height:16px;
+	position:absolute;
+	z-index:2;
+	background-image:url(../images/arrow-up.png);
+	margin-left:985px;
+	margin-top:500px;
+	display:none;
+}
+
+#pop_window {
+	width:400px;
+	height:300px;
+	position:fixed;
+	z-index:1;
+	left:0px;
+	bottom:0px;
+}
+
+#pop_dome {
+	width:400px;
+	height:300px;
+	overflow:hidden;
+}
+
+#pop_dome_1, #pop_dome_2 {
+	width:400px;
+	height:300px;
+}
+
+#pop_dome_2 {
+	background-color:#000;
+}
+
+#close {
+	width:16px;
+	height:16px;
+	float:right;
+	background-image:url(../images/x.png);
+	position:relative;
+	z-index:2;
+	display:none;
+}
+
+embed {
+	width:400px; 
+	height:300px; 
+	margin-top:-16px;
+}

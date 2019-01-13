@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:840px;
+	margin:0px auto;
+	text-align:center;
+	font-family:微软雅黑;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a:hover {
+	color:#5A0D43;
+	font-weight:bold;
+}
+a:active {
+	background-color:#FFF;
+}
+	.container .pic {
+		width:371px;
+		height:454px;
+		padding:5px 5px 25px 5px;
+		border:1px solid #CCC;
+		margin-left:300px;
+		_margin-left:0px;
+	}
+	
+#idGlideView {
+	height:10px;
+}
+
+#idGlideView div {
+	width:500px;
+	height:100px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人网页底部</title>
+<link rel="stylesheet" href="../css/footer.css" type="text/css" />
+<script type="text/javascript">
+	/* 获取当前时间 */
+	function show_now_time() {
+		var time_dome_1 = document.getElementById("time_dome_1");		// 显示面板
+		var today = new Date();		// 当前时间
+		var year = today.getFullYear();		// 年
+		var month = today.getMonth() + 1;		// 月
+		var date = today.getDate();		// 日
+		var hour = today.getHours();		// 时
+		var minute = today.getMinutes();		// 分
+		var second = today.getSeconds();		// 秒
+		// 判断月份是否小于 10
+		if (month < 10) {
+			month = "0" + month;
+		}
+		// 判断小时是否小于 10
+		if (hour < 10) {
+			hour = "0" + hour;
+		}
+		// 判断分钟是否小于 10
+		if (minute < 10) {
+			minute = "0" + minute;
+		}
+		// 判断秒数是否小于 10
+		if (second < 10) {
+			second = "0" + second;
+		}
+		var temp = "&nbsp;&nbsp;&nbsp;您好，ALLEN IVERSON 第三方个人官网欢迎您！&nbsp;&nbsp;&nbsp;现在是北京时间：" + year + " 年 " + month + " 月 " + date + " 日 " + hour + ":" + minute + ":" + second + "&nbsp;&nbsp;";		// 待显示字符串
+		time_dome_1.innerHTML = temp;
+	}
+	/* 设置定时器 */
+	setInterval("show_now_time()", 1000);
+</script>
+</head>
+<body>
+	<div id="time">
+		<div id="time_dome">
+			<div id="time_dome_1">
+			</div>
+			<div id="time_dome_2"></div>
+		</div>
+		<script type="text/javascript">
+			/* 循环滚动时间轴 */
+			var time_dome = document.getElementById("time_dome");		// 第一层
+			var time_dome_1 = document.getElementById("time_dome_1");		// 第二层
+			var time_dome_2 = document.getElementById("time_dome_2");		// 第三层
+			function scroll_time() {
+				time_dome_2.innerHTML = time_dome_1.innerHTML;		// 复制第二层内容到第三层
+				// 判断第一层与第三层是否交界
+				if (time_dome.scrollLeft - time_dome_2.offsetLeft == 0) {
+					time_dome.scrollLeft -= time_dome_1.offsetWidth;		// 回到最左端
+				} else {
+					time_dome.scrollLeft++;
+				}
+			}
+			/* 设置定时器 */
+			var show_time = setInterval("scroll_time()", 50);
+		</script>
+	</div>
+	<div class="container">
+		<div class="top">
+			<ul>
+				<li><a href="../love.html" target="_parent">因艾为爱</a></li>
+				<li><a href="../growing.html" target="_parent">若艾深爱</a></li>
+				<li><a href="../life.html" target="_parent">忠艾一生</a></li>
+				<li><a href="forum.html" target="_parent">艾迷地带</a></li>
+				<li><a href="contact.html" target="_parent">联系我们</a></li>
+			</ul>
+		</div>
+		<!-- <div class="bottom">Copyright&nbsp;&copy;&nbsp;2013&nbsp;1nvpu.cc&nbsp;保留所有权利</div> -->
+	</div>
+</body>
+</html>

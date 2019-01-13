@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width:980px;
+	height:1440px;
+	margin:0px auto;
+	font-family:微软雅黑;
+}
+h3 {
+	margin:0px;
+	padding:0px;
+}
+span {
+	font-size:22px;
+	color:#AF1258;
+}
+	.container iframe {
+		width:980px;
+		height:110px;
+	}
+	.container .main {
+		width:980px;
+		height:1220px;
+	}
+		.container .main .paragraph1, .container .main .paragraph2, .container .main .paragraph3, .container .main .paragraph4 {
+			width:958px;
+			border:1px solid #CCC;
+			padding:10px;
+		}
+		.container .main .paragraph1, .container .main .paragraph2, .container .main .paragraph3 {
+			height:273px;
+			margin-bottom:10px;
+		}
+		
+			.container .main .paragraph1 .pic, .container .main .paragraph2 .pic, .container .main .paragraph3 .pic, .container .main .paragraph4 .pic {
+				width:192px;
+				height:266px;
+				float:left;
+				border:1px solid #ccc;
+				padding:5px 5px 0px 5px;
+			}
+			.container .main .paragraph1 .text, .container .main .paragraph2 .text, .container .main .paragraph3 .text, .container .main .paragraph4 .text {
+				width:742px;
+				height:271px;
+				float:left;
+				margin-left:10px;
+			}
+		.container .main .paragraph2 .text, .container .main .paragraph4 .text {
+			margin-left:0px;
+			margin-right:10px;
+		}
+		.container .main .paragraph4 {
+			height:283px;
+		}
+		
+#top {
+	width:16px;
+	height:16px;
+	position:absolute;
+	z-index:2;
+	background-image:url(../images/arrow-up.png);
+	margin-left:985px;
+	margin-top:500px;
+	display:none;
+}
+
+.main img {
+	position:relative;
+	float:left;
+	-webkit-transition:-webkit-transform 0.3s ease-in;
+	-moz-transition:-moz-transform 0.3s ease-in;
+	-o-transition:-o-transform 0.3s ease-in;
+	transition:transform 0.3s ease-in;
+}
+.main img:hover {
+  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  -transform: scale(1.05, 1.05);
+  -webkit-box-shadow:2px 2px 5px #333333;
+  -moz-box-shadow:2px 2px 5px #333333;
+  box-shadow: 2px 2px 5px #333333;
+  z-index:100;
+}

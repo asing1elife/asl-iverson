@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>荣誉殿堂</title>
+<link rel="stylesheet" href="css/honour.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/nivo-slider.css" />
+<style type="text/css">
+#slider {
+	width:978px;
+	height:398px;
+	
+	background:url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.nivo-controlNav {
+	display:none;
+}
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+.nivo-caption {
+	text-shadow:none; 
+	font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a {
+	color:#efe9d1;
+	text-decoration:underline;
+}
+</style>
+<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="jQuery/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+$(function() {
+	 $('#slider').nivoSlider();
+});
+</script>
+</head>
+<body>
+	<div class="container">
+		<iframe name="header" frameborder="0" scrolling="no" src="subframe/header.html"></iframe>
+		<div id="top" onclick="scroll_return_top()" style="cursor:pointer"></div>
+		<script type="text/javascript" src="js/myJavaScript.js"></script>
+		<div class="main">
+			<div class="pic">
+				<div id="slider" class="nivoSlider">
+					<img src="images/honour_top_pic_1.jpg" alt="" title="" />
+					<img src="images/honour_top_pic_2.jpg" alt="" title="" />
+					<img src="images/honour_top_pic_3.jpg" alt="" title="" />
+					<img src="images/honour_top_pic_4.jpg" alt="" title="" />
+				</div>
+				<p id="stat"><script type="text/javascript" src="js/tongji.js"></script></p>
+			</div>
+			<div class="text">
+				<h3>大学时期</h3>
+				<hr />
+				<div class="text_pic1"><img src="images/honour_text_pic1.jpg" alt="" title="" /></div>
+				<p>1993 年同时获得弗吉尼亚州<span>橄榄球</span>和<span>篮球</span>的<span>州冠军</span>以及<span>年度最佳球员</span></p><br />
+				<p>1994-1995 赛季获得大东部<span>最佳新秀</span>，大东部<span>最佳防守队员</span></p><br />
+				<p>1995-1996 赛季<span>蝉联</span>大东部最佳防守队员，入选<span>大东部最佳阵容第一队</span>以及<span>全美联盟最佳阵容第一队</span></p><br /><br />
+				<h3>NBA 时期</h3>
+				<hr />
+				<p>1996 年被费城 76 人在第一轮第一顺位选中，成为 NBA <span>选秀状元</span>，同时也是 NBA 历史上个子<span>最矮的状元</span></p><br />
+				<p>1996-1997 赛季获得<span>新秀全明星 MVP</span> 以及<span>年度最佳新秀</span>，同时入选 NBA 新秀最佳阵容第一队</p><br />
+				<div class="text_pic2"><img src="images/honour_text_pic2.jpg" alt="" title="" /></div>
+				<p>1998-1999 赛季获得<span>常规赛得分王</span>，同时入选 NBA <span>最佳阵容第一队</span></p><br />
+				<p>1999-2000 赛季入选 NBA <span>最佳阵容第二队</span></p><br />
+				<p id="special">2000-2001 赛季带领费城 76 人打入总决赛，并获得常规赛得分王以及抢断王，再次入选 NBA 最佳阵容第一队，并且同时获得全明星赛 MVP 和常规赛 MVP </p><br />
+				<p>2001-2002 赛季入选 NBA 最佳阵容第二队，<span>蝉联常规赛得分王以及抢断王</span></p><br />
+				<p>2002-2003 赛季再次入选 NBA 最佳阵容第二队，<span>连续 3 次获得常规赛抢断王</span></p><br />
+				<div class="text_pic3"><img src="images/honour_text_pic3.jpg" alt="" title="" /></div>
+				<p>2004 年雅典奥运会担任美国<span>梦 6 队队长</span>，并带队获得<span>奥运会男篮季军</span></p><br />
+				<p>2004-2005 赛季获得全明星赛 MVP 以及常规赛得分王，入选 NBA 最佳阵容第一队</p><br />
+				<p id="special">艾弗森 NBA 职业生涯先后 11 次入选全明星阵容，在这项记录上，已经比肩张伯伦、摩西·马龙等球员</p><br />
+			</div>
+		</div>
+		<iframe name="footer" frameborder="0" scrolling="no" src="subframe/footer.html"></iframe>
+	</div>
+</body>
+</html>
